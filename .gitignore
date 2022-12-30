@@ -10,7 +10,7 @@ Icon?
 /.vscode
 /archives
 /node_modules
-/resources
+/offline
 /vendor
 
 # Laravel
