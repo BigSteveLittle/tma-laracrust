@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// 1. 'variableOrObject': description.
+Route::get('/posts', function() {
+    return response()->json([
+        'posts' => [
+            [
+                'filmTitle' => 'Mystery of the Wax Museum',
+                'releaseYear' => '1933'
+            ]
+        ]
+            ]);
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
