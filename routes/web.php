@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\View\ViewName;
 use Illuminate\Support\Facades\Route;
+use App\Models\Crust;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,42 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// NEW ROUTE.
-
+// 1. 'Route::get': will return all crusts.
 Route::get('/', function() {
     return view('crusts', [
         'heading1' => 'Latest Crusts', 
-        'heading2' => 'Crustings'
+        'heading2' => 'crusts',
+        'crusts' => Crust::all()
     ]);
 });
 
-// 1. 'Route::get': passes an end point and a function that returns a view.
-Route::get('/hello', function() {
-    return response('<h1>Hey Bro!</h1>', 200)
-        ->header('Content-Type', 'text/plain')
-        ->header('foo', 'boo');
-});
-// 2. 'variableOrObject': description.
-Route::get('/posts/{num}', function($num) {
-    // dd($num);
-    // ddd($num);
-    return response(htmlspecialchars('Posts: ' . $num));
-})->where('num', '[0-9]+');
-
-Route::get('/jello', function() {
-    return response('<h1>Hey Dude!</h1>', 200);
-});
-
-// 2. 'variableOrObject': description.
-Route::get('/posters/{num}', function($num) {
-    return response(htmlspecialchars('Post: ' . $num));
-})->where('num', 6);
-// 4. 'search Query': access values from a query string.
-Route::get('/search', function(Request $request) {
-    // dd($request->inputName . ' ' . $request->suburb);
-    return htmlspecialchars($request->inputName . ' lives in good old ' . $request->suburb);
+// 2. 'Route::get': passes an end point and a function that returns a view.
+Route::get('/crust/{crustId}', function ($crustId) {
+    return view('crust', [
+        'heading1' => 'Result',
+        'heading2' => 'Your Crust',
+        'crust' => Crust::find($crustId)
+    ]);
 });
