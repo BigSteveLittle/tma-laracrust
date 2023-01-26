@@ -17,19 +17,6 @@ use App\Models\Crust;
 */
 
 // 1. 'Route::get': will return all crusts.
-Route::get('/', function() {
-    return view('crusts', [
-        'heading1' => 'Latest Crusts', 
-        'heading2' => 'crusts',
-        'crusts' => Crust::all()
-    ]);
-});
+
 
 // 2. 'Route::get': passes an end point and a function that returns a view.
-Route::get('/crust/{crustId}', function ($crustId) {
-    return view('crust', [
-        'heading1' => 'Result',
-        'heading2' => 'Your Crust',
-        'crust' => Crust::find($crustId)
-    ]);
-});
