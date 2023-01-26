@@ -71,4 +71,4 @@ YouTube Channel: https://www.youtube.com/c/TraversyMedia
 Video Link: https://youtu.be/MYyJ4PuL4pY
 
 ## Project Status
-![0% Complete](https://img.shields.io/static/v1?label=Completed&message=0%&color=green)
+![16% Complete](https://img.shields.io/static/v1?label=Completed&message=16%&color=green)
