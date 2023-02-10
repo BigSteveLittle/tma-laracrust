@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\View\ViewName;
 use Illuminate\Support\Facades\Route;
-use App\Models\Crust;
+use App\Models\CrustListing;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,17 @@ use App\Models\Crust;
 */
 
 // 1. 'Route::get': will return all crusts.
+Route::get('/', function() {
+    return view('crust-listing', [
+        'heading1' => 'Latest  Crusts',
+        'crustListing' => CrustListing::all()
+    ]);
+});
 
-
-// 2. 'Route::get': passes an end point and a function that returns a view.
+// 2. 'Route::get': will return a single crust listing that matches the '$searchId'.
+Route::get('/crusts/{crustId}', function($searchId) {
+    return  view('crust', [
+        'heading1' => "You're Crust", 
+        'crust' => CrustListing::find($searchId)
+    ]);
+});
