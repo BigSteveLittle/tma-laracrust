@@ -4,8 +4,8 @@
 Following along with YouTube video tutorial 'Laravel From Scratch 2022' by Brad Traversy of Traversy Media. The learning project, LaraCrust is an online positions board for those looking for working with Laravel. Note: if you are confused by the word 'Crust' there is a common term in Australia/New Zealand 'What do you do for a crust?' to mean what you do for a job. 
 
 ## Badges
-![97.2% PHP](https://img.shields.io/static/v1?label=PHP&message=97.2%&color=purple)
-![1.4% Blade](https://img.shields.io/static/v1?label=Blade&message=1.4%&color=pink)
+![97.1% PHP](https://img.shields.io/static/v1?label=PHP&message=97.1%&color=purple)
+![1.5% Blade](https://img.shields.io/static/v1?label=Blade&message=1.5%&color=pink)
 ![0.3% JS](https://img.shields.io/static/v1?label=JS&message=0.3%&color=yellow)
 ![1.1% Other](https://img.shields.io/static/v1?label=Other&message=1.1%&color=lightgray)
 
@@ -70,4 +70,4 @@ YouTube Channel: https://www.youtube.com/c/TraversyMedia
 Video Link: https://youtu.be/MYyJ4PuL4pY
 
 ## Project Status
-![21% Complete](https://img.shields.io/static/v1?label=Completed&message=21%&color=green)
+![23.55% Complete](https://img.shields.io/static/v1?label=Completed&message=23.55%&color=green)
