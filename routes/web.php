@@ -25,9 +25,9 @@ Route::get('/', function() {
 });
 
 // 2. 'Route::get': will return a single crust listing that matches the '$searchId'.
-Route::get('/crusts/{crustId}', function($searchId) {
+Route::get('/crusts/{id}', function($id) {
     return  view('crust', [
         'heading1' => "You're Crust", 
-        'crust' => CrustListing::find($searchId)
+        'crust' => CrustListing::find($id)
     ]);
 });

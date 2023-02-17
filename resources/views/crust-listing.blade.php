@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>a {color: green}; a:visited {color: lightblue};</style>
         <title>LaraCrusts</title>
     </head>
     <body>
@@ -15,7 +16,7 @@
             {{-- Version 2 using 'unless' a native Blade command. --}}
             @unless (count($crustListing) == 0)
                 @foreach($crustListing as $crust)
-                    <h2><a href="./crusts/{{ $crust['crustId'] }}">{{ $crust['crustTitle'] }}</a></h2>
+                    <h2><a href="./crusts/{{ $crust['id'] }}">{{ $crust['crustTitle'] }}</a></h2>
                         <p>{{ $crust['crustDescription'] }}</p>
                 @endforeach
                 @else
